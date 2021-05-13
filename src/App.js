@@ -1,12 +1,29 @@
 import "./App.css";
 import Card from "./Card";
+import { Grid } from "@material-ui/core";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello there</h1>
-      <Card />
-    </div>
+    <Grid container>
+      <Grid item xs={6}>
+        <Card />
+      </Grid>
+      <Grid item xs={6}>
+        <Card />
+      </Grid>
+      <Grid item xs={6}>
+        <Card />
+      </Grid>
+      <Grid item xs={6}>
+        <Card />
+      </Grid>
+      <Grid item xs={6}>
+        <Card />
+      </Grid>
+      <Grid item xs={6}>
+        <Card />
+      </Grid>
+    </Grid>
   );
 }
 
