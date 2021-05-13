@@ -33,19 +33,25 @@ function App() {
   }, []);
 
   return (
-    <Grid
-      container
-      spacing={3}
-      className={classes.gridContainer}
-      justify="center"
-    >
-      <Grid item xs={12} sm={6} md={4}>
+    <div className="app">
+      <h1>Posts</h1>
+
+      <Grid
+        container
+        spacing={3}
+        className={classes.gridContainer}
+        justify="center"
+      >
         {posts.map((post, index) => (
-          // <h2 key={post.id}>{JSON.stringify(post)}</h2>
-          <Card key={post.id}>{post.body}</Card>
+          <Grid item xs={12} sm={6} md={4} key={post.id}>
+            <Card style={{ height: 250 }}>
+              <CardHeader title={post.title} />
+              <CardContent>{post.body}</CardContent>
+            </Card>
+          </Grid>
         ))}
       </Grid>
-    </Grid>
+    </div>
   );
 }
 
